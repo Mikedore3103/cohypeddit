@@ -36,13 +36,10 @@ box-sizing: border-box;
 }
 
 
-p,
-.p{
+p{
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
-    padding-top: 10px;
-    padding-bottom: 20px;
 }
 .inter-font {
     font-family: 'Inter', sans-serif;
@@ -53,46 +50,30 @@ p,
 
 
 
-h1,
-.h1 {
+h1{
     margin-top: 40px;
-    color: black;
-    display: block;
     font-family: "Archivo Black", sans-serif;
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 600;
     text-transform: uppercase;
-    height: 165px;
-    letter-spacing: 1px;
-    line-height: 50px;
-    margin-block-end: 28px;
-    margin-bottom: 50px;
-    margin-top: 0px;
+    
 }
 
-h2,
-.h2 {
-    margin: 0 0 30px 0;
-    color: rgb(255, 255, 255);
+h2{
     font-family: "Archivo Black", sans-serif;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 400;
-    letter-spacing: -1px;
-    line-height: 36px;
+    
 }
 
-h3,
-.h3 {
+h3{
     font-family: "Archivo Black", sans-serif;
-    color: black;
     font-size: 24px;
     font-weight: 500;
-    height: 26.4px;
 }
 
 
-h4,
-.h4 {
+h4{
     font-family: "Archivo Black", arial;
     color: white;
     font-size: 16px;
@@ -100,8 +81,11 @@ h4,
 
 }
 
+   
+
+
 .header{
-    display: inline-block;
+    display: block;
     min-height: 120vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/main-banner-bg.jpg);
@@ -204,28 +188,19 @@ nav img{
 }
 
 
-.container {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
-.container img {
-    width: 100%;
-}
-
 .text-block{
     width: 50%;
-    position: relative;
-    top: 160px;
-    left: 600px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     text-align: left;
-    color: white;
+    gap: 20px;
+    
 }
 
 .header-text{
-    position: absolute;
     top: 70px;
     color: #fff;
 }
@@ -376,12 +351,7 @@ nav img{
      to {
         transform: translateX(-100%);
     }
-}
-
-    
-
-
-
+} 
 
 
     
@@ -484,6 +454,19 @@ nav img{
 
 }
 
+@media(max-width: 850px){
+    .community-section{
+        flex-direction: column;
+        margin-top: 20px;
+
+        
+    }
+
+    .community-text-block{
+        width: 2px;
+    }
+}
+
 
 .whatyouget-section{
     display: block;
@@ -545,22 +528,6 @@ nav img{
     
 }
 
-
- .app-section {
-    display: block;
-    background: linear-gradient(to bottom, #fff 0%, #fff 50%, #000 50%, #000 100%);
-}
-
-
-.app-container{
-    display: flex;
-    padding: 0px 200px;
-    height: auto;
-    align-content: center;
-    justify-content: center;
-    color: white;
-
-}
 
     
 
@@ -717,8 +684,8 @@ nav img{
 .footer-icon i{
     width: 40px;
     height: 40px;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: black;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -774,5 +741,149 @@ nav img{
     transform: translateX(5px);
 }
 
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 850px) {
+    nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 10px 2vw;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .header {
+        min-height: 80vh;
+        padding: 20px 2vw;
+    }
+    .text-block {
+        width: 90%;
+        position: static;
+        margin: 40px auto 0 auto;
+        padding: 16px;
+        text-align: center;
+    }
+    .image-block img {
+        position: static;
+        width: 60%;
+        max-width: 180px;
+        margin: 24px auto;
+        right: unset;
+        top: unset;
+    }
+    .header .featured {
+        position: static;
+        width: 100%;
+        margin: 24px auto 0 auto;
+        text-align: center;
+        left: unset;
+        top: unset;
+        transform: none;
+    }
+    .hero-para {
+        position: static;
+        width: 95%;
+        margin: 24px auto;
+        top: unset;
+    }
+    .header .btn {
+        position: static;
+        width: 100%;
+        margin: 24px auto;
+        padding: 13px 0;
+        top: unset;
+    }
+    .featured-section,
+    .featured-section2,
+    .community-section,
+    .whatyouget-section,
+    .testimonial-container,
+    .footer {
+        flex-direction: column !important;
+        padding: 40px 2vw !important;
+        gap: 24px !important;
+    }
+    .featured-container,
+    .featured-container2,
+    .whatyouget-section-cards {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+    .featured-box1,
+    .featured-box2 {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .featured-box1-images,
+    .featured-box2-images {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
+        width: 100%;
+    }
+    .featured-button,
+    .wyg-button {
+        width: 100%;
+        margin: 24px auto;
+        padding: 12px 0;
+    }
+    .community-text-block {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    .whatyouget-text-block {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    .whatyouget-section-image-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+    .whatyouget-section-cards p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .testimonial-text {
+        height: 250px;
+    }
+    .testimonial-pic {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .footer {
+        padding: 40px 4vw 30px !important;
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+    }
+    .sec-1 img {
+        width: 100px;
+    }
+    .sec-1 p {
+        max-width: 100%;
+        font-size: 15px;
+        margin: 12px 0;
+    }
+}
+@media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    .header {
+        min-height: 60vh;
+        padding: 10px 1vw;
+    }
+    .footer {
+        padding: 20px 2vw 15px !important;
+    }
+}
 
-   
+
